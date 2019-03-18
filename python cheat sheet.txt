@@ -1,0 +1,296 @@
+####################################
+#				PYTHON			   #
+####################################
+
+Bizzare Contact / David ( Dave )  & Daniel
+version 2.7 
+
+
+# is a comment
+
+####################################
+#			VARIABLE			   #
+####################################
+
+VARIABLES BASIC TYPES:
+	STRING - ALL CHARACTERS
+	INTETGERS - ALL NUMBERS
+	LONG - ALL THE BIG NUMBERS
+	FLOAT - ALL FRUCTIONS NUMBERS
+	BOOLEAN - TRUE/FALSE
+	
+COMPLEX VARIABLES:
+	LIST - NUMBER OF MULTIPLE VARIABLE UNDER 1 NAME
+	DICTIONARY - LIST OF KEYS AND THEIR VALUES
+	TUPLE - IMMUTABLE LIST (CANNOT CHANGE)
+	
+<VAR NAME> = <VALUE> #WHITOUT <>
+
+NUM = 10
+A = 56
+
+a, b, c = 15, 20, 26 #a=15 b=20 c=26
+
+
+
+####################################
+#	   STRING MANIPULATION		   #
+####################################
+
+str1 = "hi "
+str2 = "world"
+str1 + str2 == "hi world"
+
+print "A" * 3 #AAA
+
+name = "daniel"
+
+#var[from:to not included:jump]
+name[0] == "d"
+name[1:3] == "an"
+name[0:4:2] == "dn"
+
+name.find("python") #will return the index **-1 if doesnt exist
+
+very_long_string = "this is very long string"
+very_long_string.split(" ") == ["this","is","very","long","string"]
+very_long_string.split("s") == ["thi"," i"," very long ","tring"]
+
+#very_long_string.replace(from,to) #will replace only the first match
+very_long_string.replace("is","wow")
+
+int("42") == 42
+str(42) == "42"
+
+int("s") == error s is not a number
+
+"my age is %s and my name is %s" %("23","daniel") == "my age is 23"
+
+%s - for string
+%d - for number
+
+
+####################################
+#	   INTEGER MANIPULATION		   #
+####################################
+
+NUM = 10
+MANIPLULATION WITH OPERATORS
+
+####################################
+#	   		OPERATORS	     	   #
+####################################
+
+MATH OPERATORS:
+	+ - PLUS
+	- - MINUS
+	* - MULTIPLICATION
+	/ - DIVISION
+	% - MODULU
+	** - POWER
+
+LOGICAL OPERATORS:
+	> - GREATER THAN
+	< - LOWER THAN
+	== - EQUAL
+	<= - LOWER THAN OR EQUAL
+	>= - GREATER THAN OR EQUAL
+	!= - DIFFERENT
+	
+BINARY OPERATORS:
+	^ - xor
+	& OR && - and
+	| OR || - or
+	! - not
+	
+INSERT OPERATORS:
+	= - PUT INTO #NUM = 5
+	+= - NUM = NUM + 5
+	-= - NUM = NUM - 5
+####################################
+#	   			LIST 	     	   #
+####################################
+
+INDEX == LOCATION STARTING FROM 0
+
+LIST0 = []
+LIST1 = ["DANIEL","YOGEV",25]
+
+LIST1[0] == "DANIEL"
+LIST1[FROM:TO NOT INCLUDED:JUMP]
+LIST[5::] - FROM THE FIFTH INDEX TILL THE END
+LIST[-1] - ONLY THE LAST VARIABLE
+
+len(LIST1) #will return the numbers of elements in a list
+
+LIST0.append("56") #will add the element to the list
+
+num = 15
+LIST0.append(num) #will add the element to the list
+
+LIST1.reverse() #will reverse the original list
+LIST1.pop() #return thew last variable and delete it from the list
+
+#LIST1.insert(index,value)
+LIST1.insert(2,"name") #will insert the value to specific index
+
+del LIST1[index] #will delete the specific element
+
+####################################
+#	   			TUPLE 	     	   #
+####################################
+
+MY_TUPLE = (1,2,"59")
+
+#equal to list but cannot change
+
+a, b, c = MY_TUPLE #a = 1, b = 2, c = "59"
+
+####################################
+#	   		DICTIONARY 	     	   #
+####################################
+
+DICT = {}
+
+#DICT1 = {KEY:VALUE,KEY:VALUE} OR dict(KEY=VALUE,KEY=VALUE)
+
+DICT1 = {"NAME":"DAVID","AGE":"59"}
+DICT2 = dict("NAME"="DAVID","AGE"=52)
+
+DICT1.has_key('name') #will return true or false
+DICT1.key() #will return all the keys
+DICT1.items() #will return all the items (key:value)
+DICT1.values() #will return all the values
+DICT1.get('name') #will return the specific key (without an error if it doesnt exist)
+
+del DICT1['name'] #will delete all the item
+DICT1.clear() #will clear all the dictionary
+
+
+####################################
+#	   		CALL FOR HELP      	   #
+####################################
+
+dir(<VAR>) #will print all the possible options of the var
+help(command) #will print the command manual
+
+
+####################################
+#	   			INPUT	      	   #
+####################################
+
+raw_input() #get a string from user
+input() #get an int from user
+
+num = raw_input("please enter a value:") #get a string from user and print a msg
+
+input("please enter a value:") #get an int from user and print a msg
+
+
+####################################
+#	   		CONDITIONS	      	   #
+####################################
+
+if <condition>:
+	what to do if true
+else:
+	what to do if false
+
+
+	
+if <condition>:
+	what to do if true
+else:
+	if <condition>
+		what to do if true
+	else:
+		what to do if false
+		
+#equal to:
+if <condition>:
+	what to do if true
+elif <condition>
+	what to do if true
+else:
+	what to do if false
+	
+
+####################################
+#	   			LOOPS	      	   #
+####################################
+	
+TWO TYPES:
+	1. FOR
+	2. WHILE
+	
+####################################
+#	   			WHILE	      	   #
+####################################
+
+while <condition>:
+	what to do repeat if the condition is true
+	
+brake - brake the inner loop
+	
+####################################
+#	   			 FOR	      	   #
+####################################	
+	
+for i in str:
+	what to do for each variable
+	
+for i in [1,2,3,4]:
+	what to do for each variable
+
+for shoshi in range(5):
+	what to do for each variable
+	
+#range(from,to not included,jump) will return a list
+range(0,5) == [0,1,2,3,4]
+
+####################################
+#	   		EXCEPTIONS	      	   #
+####################################
+try:
+	#some code
+except:
+	#what to do if collapses
+
+else - will run only if there is no exception
+finally - will run anyway
+raise - to raise costume made error
+
+####################################
+#	   		FILES I/O	      	   #
+####################################
+
+#VAR = open(location,mode)
+modes:
+	r - read
+	w - write #will delete the original information 
+	a - append #in the end and creates the file if doesnt exist
+	rb - read bytes
+	wb - write bytes
+
+location = r"C:\Users\hackeru\Desktop\secret.txt"
+mode = "r"
+
+file_to_read = open(location,mode)
+
+FILES MANIPULATIONS:
+	file_to_read.read() #return the content of the file
+	file_to_read.write("this is very long string") #insert the content to file
+	file_to_read.close() - close the file
+	file_to_read.flush() - saves the file but keeps it opened
+
+	
+
+
+	
+	
+
+
+
+
+
+
